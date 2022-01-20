@@ -1,0 +1,13 @@
+service: sls-yarn3
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: us-east-1
+  stage: dev
+  deploymentBucket:
+    name: playground-sls-deploy-bucket
+  
+functions:
+  get:
+    handler: handler.main
